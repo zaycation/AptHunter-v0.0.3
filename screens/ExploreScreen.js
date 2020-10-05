@@ -1,14 +1,18 @@
 import * as React from "react";
 import { View, Text, Image } from "react-native";
 import { TextInput, ScrollView } from "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "@expo/vector-icons/Ionicons";
 import New from "./common/New";
 import Hot from "./common/Hot";
 import Featured from "./common/Featured.js";
 
-export default function ExploreScreen() {
+const Stack = createStackNavigator();
+
+function MainCont() {
   return (
-      <View>
+    <View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{
@@ -20,7 +24,7 @@ export default function ExploreScreen() {
           style={{
             flexDirection: "row",
             width: "100%",
-            marginTop: 40,
+            marginTop: 20,
             alignItems: "center",
           }}
         >
@@ -172,7 +176,7 @@ export default function ExploreScreen() {
         <View
           style={{
             flexDirection: "row",
-            marginTop: 30,
+            marginTop: 5,
             marginBottom: 10,
             alignItems: "center",
           }}
@@ -217,6 +221,16 @@ export default function ExploreScreen() {
           <Hot />
         </ScrollView>
       </ScrollView>
-      </View>
+    </View>
+  );
+}
+
+export default function ExploreScreen() {
+  return (
+    <NavigationContainer independent={true} Z>
+      <Stack.Navigator>
+        <Stack.Screen name="Explore" component={MainCont} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
