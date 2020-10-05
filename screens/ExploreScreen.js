@@ -1,15 +1,14 @@
 import * as React from "react";
 import { View, Text, Image } from "react-native";
 import { TextInput, ScrollView } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "@expo/vector-icons/Ionicons";
 import New from "./common/New";
-import Best from "./common/Best";
-import Couches from "./common/couches.js";
+import Hot from "./common/Hot";
+import Featured from "./common/Featured.js";
 
 export default function ExploreScreen() {
   return (
-    <SafeAreaView>
+      <View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{
@@ -116,8 +115,8 @@ export default function ExploreScreen() {
         >
           <Text
             style={{
-              fontFamily: "Bold",
-              fontSize: 18,
+              fontWeight: "bold",
+              fontSize: 20,
               color: "#4f4a4a",
             }}
           >
@@ -134,29 +133,38 @@ export default function ExploreScreen() {
           ></View>
           <Text
             style={{
-              fontFamily: "Bold",
+              fontWeight: "bold",
               fontSize: 9,
               color: "#4f4a4a",
             }}
           >
-            Good Quality items
+            🌟 All Star Listings
           </Text>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <Couches
-            src={require("./images/1.png")}
-            name="Beautiful Couches"
+          <Featured
+            src={{
+              uri:
+                "https://50jones.com/wp-content/uploads/2020/04/50-Jones-Apartments-San-Francisco_Exterior_Jones-Street-800x600.jpg",
+            }}
+            name="50 Jones (San Francisco)"
             onPress={() => this.props.navigation.navigate("About")}
           />
-          <Couches
-            src={require("./images/2.png")}
-            name="Autobe best chair"
+          <Featured
+            src={{
+              uri:
+                "https://www.rentnema.com/assets/uploads/transforms/images/san-francisco/Home/1439/0G3A7916_9bac04bcfeef2626e8a17b2d76793985.jpg",
+            }}
+            name="NEMA (San Francisco"
             onPress={() => this.props.navigation.navigate("About")}
           />
-          <Couches
-            src={require("./images/1.png")}
-            name="Beautiful Couches"
+          <Featured
+            src={{
+              uri:
+                "https://images1.apartments.com/i2/5VKOF_oxR4iIva9LBe8IfKHeg63XRpQ4ESel4OiR9Ck/117/the-gantry-san-francisco-ca-primary-photo.jpg",
+            }}
+            name="The Gantry (San Francisco)"
             onPress={() => this.props.navigation.navigate("About")}
           />
         </ScrollView>
@@ -169,14 +177,8 @@ export default function ExploreScreen() {
             alignItems: "center",
           }}
         >
-          <Text
-            style={{
-              fontFamily: "Bold",
-              color: "#4f4a4a",
-              fontSize: 20,
-            }}
-          >
-            New Listings
+          <Text style={{ fontWeight: "bold", color: "#4f4a4a", fontSize: 20 }}>
+            Newest Listings
           </Text>
           <View
             style={{
@@ -187,14 +189,8 @@ export default function ExploreScreen() {
               marginHorizontal: 4,
             }}
           ></View>
-          <Text
-            style={{
-              fontFamily: "Bold",
-              fontSize: 10,
-              color: "#4f4a4a",
-            }}
-          >
-            Good Quality items
+          <Text style={{ fontWeight: "bold", fontSize: 10, color: "#4f4a4a" }}>
+            📍 Within 50 mi.
           </Text>
         </View>
 
@@ -209,18 +205,18 @@ export default function ExploreScreen() {
             marginTop: 20,
             color: "#4f4a4a",
             fontSize: 18,
-            fontFamily: "Bold",
+            fontWeight: "bold",
           }}
         >
           Hot Now 🔥
         </Text>
 
         <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-          <Best />
-          <Best />
-          <Best />
+          <Hot />
+          <Hot />
+          <Hot />
         </ScrollView>
       </ScrollView>
-    </SafeAreaView>
+      </View>
   );
 }

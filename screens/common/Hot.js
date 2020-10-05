@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, ImageBackground} from 'react-native';
 
-export default class Best extends React.Component{
+export default class Hot extends React.Component{
     render(){
         return(
            <ImageBackground
@@ -21,14 +21,14 @@ export default class Best extends React.Component{
            >
                <Text style={{
                    fontFamily:"Bold",
-                   color:"#FFF",
+                   color:"black",
                    fontSize:15
-               }}>Zara Furniture World</Text>
+               }}>Discounted This Week</Text>
                <Text style={{
                    fontFamily:"Bold",
-                   color:"#FFF",
+                   color:"black",
                    fontSize:12
-               }}>Get 25% OFF</Text>
+               }}>-$350 from Security Deposit</Text>
            </ImageBackground>
         )
     }

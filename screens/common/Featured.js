@@ -1,8 +1,9 @@
 import React from "react";
 import { Text, View, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Icon from "@expo/vector-icons/Ionicons";
 
-export default class Couches extends React.Component {
+export default class Featured extends React.Component {
   render() {
     return (
       <TouchableOpacity
@@ -70,10 +71,13 @@ export default class Couches extends React.Component {
             fontFamily: "Regular",
           }}
         >
-          Full sleeves short dress with three attractive colors and and
-          available in various sizes.
+          Studios - 3 Bedrooms Available
         </Text>
-
+        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+          <Icon name="ios-water" size={18} color="steelblue" />
+          <Icon name="ios-wifi" size={18} color="steelblue" />
+          <Icon name="ios-videocam" size={18} color="steelblue" />
+        </View>
         <View
           style={{
             flexDirection: "row",
@@ -93,7 +97,7 @@ export default class Couches extends React.Component {
                 fontFamily: "Bold",
               }}
             >
-              324.69 USD
+              $2,170+/mo
             </Text>
           </View>
           <View
