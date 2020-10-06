@@ -6,7 +6,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "@expo/vector-icons/Ionicons";
 import New from "./common/New";
 import Hot from "./common/Hot";
-import Featured from "./common/Featured.js";
+import Featured from "./common/Featured";
+import styles from "./ExploreStyles";
 
 const Stack = createStackNavigator();
 
@@ -35,7 +36,7 @@ function MainCont() {
           >
             <Text
               style={{
-                fontFamily: "Bold",
+                fontWeight: "Bold",
                 fontSize: 22,
               }}
             >
@@ -63,43 +64,19 @@ function MainCont() {
             marginVertical: 30,
           }}
         >
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              elevation: 2,
-              width: "85%",
-              backgroundColor: "#FFF",
-              paddingHorizontal: 20,
-              height: 35,
-              borderRadius: 10,
-              marginLeft: 1,
-            }}
-          >
+          <View style={styles.searchBar}>
             <Icon name="ios-search" size={22} color="#4f4a4a" />
             <TextInput
               placeholder="Search nearby listings..."
               style={{
-                fontFamily: "Medium",
+                fontWeight: "Medium",
                 paddingHorizontal: 10,
                 fontSize: 12,
               }}
             />
           </View>
 
-          <View
-            style={{
-              alignItems: "center",
-              elevation: 2,
-              width: "15%",
-              backgroundColor: "#FFF",
-              marginLeft: 5,
-              height: 35,
-              borderRadius: 10,
-              marginLeft: 1,
-              justifyContent: "center",
-            }}
-          >
+          <View style={styles.filterIcon}>
             <Image
               source={require("./images/sort.png")}
               style={{
@@ -117,15 +94,7 @@ function MainCont() {
             alignItems: "center",
           }}
         >
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 20,
-              color: "#4f4a4a",
-            }}
-          >
-            Featured
-          </Text>
+          <Text style={styles.header1}>Featured</Text>
           <View
             style={{
               width: 5,
@@ -135,15 +104,7 @@ function MainCont() {
               backgroundColor: "#4f4a4a",
             }}
           ></View>
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 9,
-              color: "#4f4a4a",
-            }}
-          >
-            🌟 All Star Listings
-          </Text>
+          <Text style={styles.subHeader}>🌟 All Star Listings</Text>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -181,21 +142,9 @@ function MainCont() {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontWeight: "bold", color: "#4f4a4a", fontSize: 20 }}>
-            Newest Listings
-          </Text>
-          <View
-            style={{
-              height: 5,
-              width: 5,
-              borderRadius: 5,
-              backgroundColor: "#4f4a4a",
-              marginHorizontal: 4,
-            }}
-          ></View>
-          <Text style={{ fontWeight: "bold", fontSize: 10, color: "#4f4a4a" }}>
-            📍 Within 50 mi.
-          </Text>
+          <Text style={styles.header1}>Newest Listings</Text>
+          <View style={styles.bulletPoint}></View>
+          <Text style={styles.subHeader}>📍 Within 50 mi.</Text>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -204,16 +153,7 @@ function MainCont() {
           <New src={require("./images/sofa.png")} />
         </ScrollView>
 
-        <Text
-          style={{
-            marginTop: 20,
-            color: "#4f4a4a",
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          Hot Now 🔥
-        </Text>
+        <Text style={styles.header2}>Hot Now 🔥</Text>
 
         <ScrollView showsHorizontalScrollIndicator={false} horizontal>
           <Hot />

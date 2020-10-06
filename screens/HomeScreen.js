@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, Text, StyleSheet } from "react-native";
+import { View, ScrollView, Text, StyleSheet, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Tours from "./common/Tours";
@@ -17,22 +17,29 @@ function MainCont() {
         </Text>
       </View>
 
-      <Text
-        style={{
-          marginTop: 20,
-          color: "#4f4a4a",
-          fontSize: 18,
-          fontWeight: "bold",
-        }}
-      >
-        Recent Tours
-      </Text>
+      <View>
+        <Text
+          style={{
+            marginTop: 20,
+            color: "#4f4a4a",
+            fontSize: 18,
+            fontWeight: "bold",
+          }}
+        >
+          Recent Tours
+        </Text>
 
-      <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-        <Tours />
-        <Tours />
-        <Tours />
-      </ScrollView>
+        <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+          <Tours />
+          <Tours />
+          <Tours />
+        </ScrollView>
+      </View>
+
+      <View>
+        <Button title="Login" />
+        <Button title="Sign Up" />
+      </View>
     </ScrollView>
   );
 }
