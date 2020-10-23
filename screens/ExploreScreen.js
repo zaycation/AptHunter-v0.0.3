@@ -36,7 +36,7 @@ function MainCont() {
           >
             <Text
               style={{
-                fontWeight: "Bold",
+                fontWeight: "bold",
                 fontSize: 22,
               }}
             >
@@ -69,7 +69,7 @@ function MainCont() {
             <TextInput
               placeholder="Search nearby listings..."
               style={{
-                fontWeight: "Medium",
+                fontWeight: "bold",
                 paddingHorizontal: 10,
                 fontSize: 12,
               }}

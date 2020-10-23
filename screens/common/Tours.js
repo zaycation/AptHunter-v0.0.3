@@ -20,12 +20,12 @@ export default class RecentTours extends React.Component{
            }}
            >
                <Text style={{
-                   fontFamily:"Bold",
+                   fontWeight:"bold",
                    color:"black",
                    fontSize:15
                }}>10/05/2020</Text>
                <Text style={{
-                   fontFamily:"Bold",
+                   fontWeight:"bold",
                    color:"black",
                    fontSize:12
                }}>Virtual 3D Tour</Text>

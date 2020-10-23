@@ -3,6 +3,7 @@ import { View, ScrollView, Text, StyleSheet, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Tours from "./common/Tours";
+import MainImg from "./common/MainImg";
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ function MainCont() {
           Stop searching for your next pad on craigslist. Chat with real locals
           for a quality stay with us!
         </Text>
+        <MainImg />
       </View>
 
       <View>
@@ -46,7 +48,7 @@ function MainCont() {
 
 export default function HomeScreen() {
   return (
-    <NavigationContainer independent={true} Z>
+    <NavigationContainer independent={true}>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={MainCont} />
       </Stack.Navigator>

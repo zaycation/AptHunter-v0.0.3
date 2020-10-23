@@ -1,20 +1,20 @@
 import React from "react";
 import { Text, ImageBackground } from "react-native";
 
-export default class Hot extends React.Component {
+export default class MainImgHeader extends React.Component {
   render() {
     return (
       <ImageBackground
         source={require("../images/lr.png")}
         style={{
-          height: 130,
-          width: 230,
+          height: 200,
+          width: 370,
           marginRight: 20,
-          borderRadius: 10,
-          marginBottom: 40,
+          borderRadius: 50,
+          marginBottom: 15,
           opacity: 0.7,
           backgroundColor: "#000",
-          marginLeft: 3,
+          marginLeft: 4,
           padding: 12,
           marginTop: 20,
         }}
@@ -26,7 +26,7 @@ export default class Hot extends React.Component {
             fontSize: 15,
           }}
         >
-          Discounted This Week
+          10/05/2020
         </Text>
         <Text
           style={{
@@ -35,7 +35,7 @@ export default class Hot extends React.Component {
             fontSize: 12,
           }}
         >
-          -$350 from Security Deposit
+          Virtual 3D Tour
         </Text>
       </ImageBackground>
     );

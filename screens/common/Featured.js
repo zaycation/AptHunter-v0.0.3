@@ -38,7 +38,7 @@ export default class Featured extends React.Component {
         >
           <Text
             style={{
-              fontFamily: "Bold",
+              fontWeight: "bold",
               color: "#4f4a4a",
               fontSize: 12,
             }}
@@ -58,7 +58,7 @@ export default class Featured extends React.Component {
             style={{
               color: "red",
               fontSize: 9,
-              fontFamily: "Bold",
+              fontWeight: "bold",
             }}
           >
             New
@@ -94,7 +94,7 @@ export default class Featured extends React.Component {
             <Text
               style={{
                 fontSize: 15,
-                fontFamily: "Bold",
+                fontWeight: "bold",
               }}
             >
               $2,170+/mo

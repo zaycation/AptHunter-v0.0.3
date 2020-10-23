@@ -48,7 +48,7 @@ export default class New extends React.Component {
           <Text
             style={{
               fontSize: 11,
-              fontFamily: "Bold",
+              fontWeight: "bold",
             }}
           >
             $1,950/mo
